@@ -60,6 +60,7 @@ var x = setInterval(function() {
   var now = new Date().toLocaleString("en-US", {timeZone: tz});
   now = new Date(now);
   var diff = now.getTimezoneOffset(); 
+  diff = diff * 60 * 1000;
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now + diff;
