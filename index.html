@@ -56,7 +56,10 @@ var x = setInterval(function() {
 
   // Get today's date and time
   // var now = new Date().getTime();
-  var now = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  
+  var now = new Date().toLocaleString("en-US", {timeZone: tz});
+  now = new Date(now);
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
