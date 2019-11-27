@@ -42,16 +42,15 @@ p {
   
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date(2019, 11, 7, 22, 10, 00, 0).getTime();
-//"Dec 7, 2019 22:10:00"
+var countDownDate = new Date("Dec 7, 2019 22:10:00").getTime();
   
 // Update the count down every 1 second
 var x = setInterval(function() {
 
   // Get today's date and time
   var now = new Date().getTime();
-  var diff = now.getTimezoneOffset()*60*1000;
-  now = now + diff;
+//   var diff = now.getTimezoneOffset()*60*1000;
+//   now = now + diff;
   
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
