@@ -60,9 +60,10 @@ var x = setInterval(function() {
   var now = new Date().getTime();
   var diff = now.getTimezoneOffset(); 
   diff = diff * 60 * 1000;
+  now = now + diff;
 
   // Find the distance between now and the count down date
-  var distance = countDownDate - (now + diff);
+  var distance = countDownDate - now;
 
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
