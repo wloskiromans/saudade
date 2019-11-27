@@ -57,7 +57,7 @@ var x = setInterval(function() {
 //  var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   
 //  var now = new Date().toLocaleString("en-US", {timeZone: tz});
-  var now = new Date();
+  var now = new Date().getTime();
   var diff = now.getTimezoneOffset(); 
   diff = diff * 60 * 1000;
 
