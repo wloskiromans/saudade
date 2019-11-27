@@ -48,9 +48,10 @@ var countDownDate = new Date("Dec 7, 2019 22:10:00").getTime();
 var x = setInterval(function() {
 
   // Get today's date and time
-  var now = new Date().getTime();
-//   var diff = now.getTimezoneOffset()*60*1000;
-//   now = now + diff;
+  var now = new Date();
+  var diff = now.getTimezoneOffset()*60*1000;
+  now = now.getTime();
+  now = now + diff;
   
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
